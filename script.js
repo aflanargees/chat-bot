@@ -1,11 +1,26 @@
 let step = 0;
-
+let started = false;
 const order = {
 name: "",
 phone: "",
 quantity: "",
 address: ""
 };
+
+function startOrder(){
+
+    if(started) return;
+
+    started = true;
+
+    document.getElementById("orderBtn").style.display = "none";
+
+    addMessage(
+        "👋 Great choice! What is your name?",
+        "bot"
+    );
+
+}
 
 function addMessage(text, type) {
 
